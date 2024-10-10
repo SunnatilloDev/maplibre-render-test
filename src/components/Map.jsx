@@ -26,7 +26,7 @@ const Map = () => {
     });
 
     // Fetch and add building data
-    fetch('http://localhost:3000/api/geojson/buildings')
+    fetch('http://154.53.45.100:5050/api/geojson/buildings')
       .then((response) => response.json())
       .then((data) => {
         data.features.forEach((feature) => {
@@ -53,37 +53,37 @@ const Map = () => {
       });
 
     // Add additional layers
-    addLayer(map, 'roads', 'line', 'http://localhost:3000/api/geojson/roads', {
+    addLayer(map, 'roads', 'line', 'http://154.53.45.100:5050/api/geojson/roads', {
       'line-color': '#FF5733',
       'line-width': 0.5,
     }, 12);  // Load only after zoom level 12
 
-    addLayer(map, 'water', 'fill', 'http://localhost:3000/api/geojson/water', {
+    addLayer(map, 'water', 'fill', 'http://154.53.45.100:5050/api/geojson/water', {
       'fill-color': '#3498db',
       'fill-opacity': 0.3,
     });
 
-    addLayer(map, 'airports', 'fill', 'http://localhost:3000/api/geojson/airports', {
+    addLayer(map, 'airports', 'fill', 'http://154.53.45.100:5050/api/geojson/airports', {
       'fill-color': '#ffcc00',
       'fill-opacity': 0.6,
     });
 
-    addLayer(map, 'railways', 'line', 'http://localhost:3000/api/geojson/railways', {
+    addLayer(map, 'railways', 'line', 'http://154.53.45.100:5050/api/geojson/railways', {
       'line-color': '#2ecc71',
       'line-width': 1.5,
     }, 12);  // Load railways after zoom level 12
 
-    addLayer(map, 'boundaries', 'line', 'http://localhost:3000/api/geojson/boundaries', {
+    addLayer(map, 'boundaries', 'line', 'http://154.53.45.100:5050/api/geojson/boundaries', {
       'line-color': '#e74c3c',
       'line-width': 1.0,
     });
 
-    addLayer(map, 'landuse', 'fill', 'http://localhost:3000/api/geojson/landuse', {
+    addLayer(map, 'landuse', 'fill', 'http://154.53.45.100:5050/api/geojson/landuse', {
       'fill-color': '#9b59b6',
       'fill-opacity': 0.5,
     });
 
-    addLayer(map, 'nature', 'fill', 'http://localhost:3000/api/geojson/nature_reserves', {
+    addLayer(map, 'nature', 'fill', 'http://154.53.45.100:5050/api/geojson/nature_reserves', {
       'fill-color': '#2ecc71',
       'fill-opacity': 0.5,
     });
